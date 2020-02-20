@@ -15,7 +15,7 @@ const schema = `
     "required": ["foo", "bar"],
     "properties": {
         "foo": { "type": "string", "maxLength": 10 },
-        "bar": { "type": "number", "min": 10, "max": 100 }
+        "bar": { "type": "integer", "minimum": 10, "maximum": 100 }
     }
 }
 `
