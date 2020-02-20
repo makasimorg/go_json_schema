@@ -9,10 +9,21 @@ import (
 	"fmt"
 )
 
-var schema *gojsonschema.Schema
+const schema = `
+{
+    "type": "object",
+	"required": ["foo", "bar"],
+    "properties": {
+		"foo": { "type": "string", "maxLength": 10 },
+		"bar": { "type": "number", "min": 10, "max": 100 }
+	}
+}
+`
+
+var compiledSchema *gojsonschema.Schema
 
 func usercode(_ context.Context, data map[string]interface{}) error {
-	result, err := schema.Validate(gojsonschema.NewGoLoader(data))
+	result, err := compiledSchema.Validate(gojsonschema.NewGoLoader(data))
 	if err != nil {
 		return err
 	}
@@ -36,20 +47,10 @@ func main() {
 func init() {
 	var err error
 
-	rootSchema := gojsonschema.NewStringLoader(`
-{
-    "type": "object",
-	"required": ["foo", "bar"],
-    "properties": {
-		"foo": { "type": "string", "maxLength": 10 },
-		"bar": { "type": "number", "min": 10, "max": 100 }
-	}
-}
-`)
 	sl := gojsonschema.NewSchemaLoader()
 	sl.Validate = true
 
-	schema, err = sl.Compile(rootSchema)
+	compiledSchema, err = sl.Compile(gojsonschema.NewStringLoader(schema))
 	if err != nil {
 		log.Fatal(err)
 	}
