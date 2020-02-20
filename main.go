@@ -42,7 +42,7 @@ func init() {
 	"required": ["foo", "bar"],
     "properties": {
 		"foo": { "type": "string", "maxLength": 10 },
-		"bar": { "type": "number", "min": 10, "max": 100" }
+		"bar": { "type": "number", "min": 10, "max": 100 }
 	}
 }
 `)
