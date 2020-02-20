@@ -12,11 +12,11 @@ import (
 const schema = `
 {
     "type": "object",
-	"required": ["foo", "bar"],
+    "required": ["foo", "bar"],
     "properties": {
-		"foo": { "type": "string", "maxLength": 10 },
-		"bar": { "type": "number", "min": 10, "max": 100 }
-	}
+        "foo": { "type": "string", "maxLength": 10 },
+        "bar": { "type": "number", "min": 10, "max": 100 }
+    }
 }
 `
 
