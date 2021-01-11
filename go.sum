@@ -1,5 +1,7 @@
 github.com/corezoid/gitcall-go-runner v0.0.0-20200220093828-c63fc310f8a0 h1:L2TolBIA35zoFn39fVQyWVlopm0uLS7iH6EJUxZtvLY=
 github.com/corezoid/gitcall-go-runner v0.0.0-20200220093828-c63fc310f8a0/go.mod h1:aqG7jPvvbz3bo/TI0zixotZfVLufrtHxmMVDlvVcPZ8=
+github.com/corezoid/gitcall-go-runner v0.0.0-20200508122047-436296f9ae99 h1:7eYzHXvhNPy6XUFVbmLtNycHWHGuZQ5/+jKuO9ovcrI=
+github.com/corezoid/gitcall-go-runner v0.0.0-20200508122047-436296f9ae99/go.mod h1:aqG7jPvvbz3bo/TI0zixotZfVLufrtHxmMVDlvVcPZ8=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

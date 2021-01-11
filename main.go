@@ -4,9 +4,10 @@ import (
 	"context"
 	"log"
 
-	"github.com/corezoid/gitcall-go-runner/runner"
-	"github.com/xeipuuv/gojsonschema"
 	"fmt"
+
+	"github.com/corezoid/gitcall-go-runner/gitcall"
+	"github.com/xeipuuv/gojsonschema"
 )
 
 const schema = `
@@ -41,7 +42,7 @@ func usercode(_ context.Context, data map[string]interface{}) error {
 }
 
 func main() {
-	runner.Run(usercode)
+	gitcall.Handle(usercode)
 }
 
 func init() {
